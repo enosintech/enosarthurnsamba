@@ -1,0 +1,458 @@
+@keyframes fill {
+    0%   { width: 0; }
+    33%  { width: 30px;}
+    66%  { width: 10px;}
+    100% { width: 105px; }
+}
+  
+@keyframes fill-1 {
+    0%   { width: 0; }
+    33%  { width: 50px;}
+    66%  { width: 20px;}
+    100% { width: 130px; }
+}
+
+@keyframes fill-2 {
+    0%   { width: 0; }
+    33%  { width: 90px;}
+    66%  { width: 70px;}
+    100% { width: 136px; }
+}
+
+@keyframes fill-3 {
+    0%   { width: 0; }
+    33%  { width: 50px;}
+    66%  { width: 24px;}
+    100% { width: 109px; }
+}
+
+@keyframes fill-4 {
+    0%   { width: 0; }
+    33%  { width: 98px;}
+    66%  { width: 34px;}
+    100% { width: 99px; }
+}
+
+@keyframes fill-5 {
+    0%   { width: 0; }
+    33%  { width: 30px;}
+    66%  { width: 10px;}
+    100% { width: 148px; }
+}
+
+@keyframes fill-6 {
+    0%   { width: 0; }
+    33%  { width: 48px;}
+    66%  { width: 22px;}
+    100% { width: 140px; }
+}
+
+@keyframes colors {
+    0% { background-color: #5a5a5a;}
+    50% { background-color: rgb(77, 1, 77);}
+    100% { background-color: #6a6a6a;}
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+
+.logo-holder {
+    background: #f2f2f2;
+    width: 180px;
+    height: 150px;
+    position: relative;
+    margin: 0 auto ;
+    padding-top: 12px;
+    padding-bottom: 24px;
+    -webkit-transform: translateZ(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+ }
+
+.bg {
+  position: absolute;
+  top: 9px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  background: url(http://boutique.flarework.com/wp-content/themes/boutique/img/logo_large.png) center 0px no-repeat ;
+    background-size: contain;
+    -webkit-filter: drop-shadow(0px 6px 25px rgba(0,0,0,0.5));
+}
+
+.bar {
+    position: relative;
+    height: 8px;
+    background: #6a6a6a;
+    width:  0%;
+    top: 0px;
+    left: 18px;
+    margin-top: 8px;
+    box-shadow: 0 0 3px rgba(192,192,192,0.9);
+    animation: fill 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.bar.fill1 {
+  animation: fill-1 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.bar.fill2 {
+   animation:  fill-2 5s infinite alternate, colors 5s infinite alternate;
+}
+
+
+.bar.fill3 {
+   animation:  fill-3 5s infinite alternate, colors 5s infinite alternate;
+}
+
+
+.bar.fill4 {
+   animation:  fill-4 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.bar.fill5 {
+   animation:  fill-5 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.bar.fill6 {
+   animation:  fill-6 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.main-container {
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 300px;
+    width: 1380px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sect-1 {
+    flex-direction: column;
+}
+
+.scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-text {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 40px;
+}
+
+#scroll-logo {
+    width: 60px;
+    height: 50px;
+}
+
+.about-photos {
+    flex-wrap: wrap;
+    background-color: #333;
+}
+
+.bg1 {
+    flex-direction: column;
+}
+
+.bg2 {
+    background-color: #333;
+    flex-direction: column;
+}
+
+.about-photo {
+    width: 350px;
+    height: 350px;
+    margin-left: 60px;
+    margin-right: 60px ;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+.about-photo:hover {
+    box-shadow: 0 0px 100px rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+
+.family-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    line-height: 1.2;
+    margin: 0;
+}
+
+.animate-character {
+    font-size: 25rem;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -225deg,
+        #22A699 0%,
+        #F2BE22 29%,
+        #F29727 67%,
+        #F24C3D 100% 
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40%);
+    transition: all 1s ease-out;
+}
+
+.active {
+    opacity: 4;
+    transform: translateY(0);
+}
+
+.spacer {
+    height: 50vh;
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-text {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-shadow: 0px 0px 10px black;
+}
+
+.about-text-2 {
+    color: white;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.heading-1 {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: black;
+    text-shadow: 0px 0px 10px black;
+}
+
+.heading-2 {
+    font-family: 'Alegreya Sans', sans-serif;
+    color: white;
+    font-size: 7rem;
+    font-weight: bolder;
+}
+
+.copyright {
+    color: white;
+    margin-top: 50px;
+    font-weight: 100;
+    font-size: 15px;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.family-desc {
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 0px 0px 10px white;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    top: 0;
+    left: 0;
+}
+
+.song-player {
+    width: 230px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+#song-cover {
+    width: 200px;
+    height: 200px;
+}
+
+.playback{
+    display: flex;
+}
+
+#play-div {
+    width: 30px;
+    height: 30px;
+}
+
+#pause-div {
+    width: 30px;
+    height: 30px;
+}
+
+#play {
+    width: 100%;
+    height: 100%;
+}
+
+#play:hover {
+    fill: rgb(84, 84, 84);
+}
+
+#play:active {
+    fill: rgb(38, 38, 38);
+    transform: scale(1.1);
+}
+
+#pause {
+    width: 100%;
+    height: 100%;
+}
+
+#pause:hover {
+    fill: rgb(84, 84, 84);
+}
+
+#pause:active {
+    fill: rgb(38, 38, 38);
+    transform: scale(1.1);
+}
+
+#song-name {
+    font-weight: 100;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+    width: 160px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.big-text {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1;
+    margin: 0 10px;
+}
+
+
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span {
+    font-size :15px;
+    font-weight: lighter;
+}
+
+#next-bd {
+    font-weight: 100;
+}
+
+.desktop-prompt {
+    z-index: 6;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top: 3rem;
+    font-size: 3rem;
+    visibility: hidden;
+}
+
+.outer-container {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width: 1450px){
+    .outer-container {
+        filter: blur(100px);
+    }
+
+    .desktop-prompt {
+        visibility: visible;
+    }
+}
+
+@media (max-height: 690px){
+    .outer-container {
+        filter: blur(100px);
+    }
+
+    .desktop-prompt {
+        visibility: visible;
+    }
+}
+
+
